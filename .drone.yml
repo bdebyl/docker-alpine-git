@@ -38,3 +38,8 @@ steps:
       repo: bdebyl/alpine-git
       auto_tag: true
 
+---
+kind: signature
+hmac: 8beb1d41903dd82fe8cac4debd0b662f8a94263905e4b912449d2286fbfd772b
+
+...
