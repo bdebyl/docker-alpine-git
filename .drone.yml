@@ -11,10 +11,9 @@ steps:
       password:
         from_secret: docker_password
       repo: bdebyl/alpine-git
-      auto_tag: true
 
 ---
 kind: signature
-hmac: f5cbb9a31c11d87b2881fab3bb1d3eb39bf6278624fd700aada89cee9e2ff322
+hmac: de5c53c685f21e16ef4e63b806ab93f4128d2e0fd5ebe0e0e3d8b00d79de78a3
 
 ...
