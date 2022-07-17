@@ -2,7 +2,17 @@
 kind: pipeline
 name: default
 
+clone:
+  disable: true
+
 steps:
+  - name: clone
+    image: docker.io/alpine/git
+    commands:
+      - git clone https://github.com/bdebyl/docker-alpine-git.git .
+      - git checkout $DRONE_COMMIT
+      - echo -n "0.1.$DRONE_BUILD_NUMBER" > .tags
+
   - name: publish
     image: plugins/docker
     settings:
@@ -14,6 +24,6 @@ steps:
 
 ---
 kind: signature
-hmac: de5c53c685f21e16ef4e63b806ab93f4128d2e0fd5ebe0e0e3d8b00d79de78a3
+hmac: 73c6cc283695c32ca91abb922d37150669279dba98d5696222c0fcb2f4b26b18
 
 ...
